@@ -1,0 +1,13 @@
+Modèle;Data_set;Moyenne_mobile;Score_test;Gain_apres_enrichissement;Gain_bookmakers
+LR;dataset_1;N/A;62.49%;1.46%;3.11%
+LR;dataset_2;100_match;63.95% ;1.46%;3.11%
+LR;dataset_3;100_match;67.06% ;1.46%;3.11%
+RF;dataset_1;N/A;62.76%;1.81%;2.64%
+RF;dataset_2;50_match;64.57% ;1.81%;2.64%
+RF;dataset_3;100_match;67.21% ;1.81%;2.64%
+KNN;dataset_1;N/A;55.71%;3.01%;0.31%
+KNN;dataset_2;50_match;58.72% ;3.01%;0.31%
+KNN;dataset_3;100_match;59.03%;3.01%;0.31%
+SVC;dataset_1;N/A;61.58%;3.04%;2.08%
+SVC;dataset_2;200_match;64.62% ;3.04%;2.08%
+SVC;dataset_3;200_match;66.7% ;3.04%;2.08%
