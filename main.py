@@ -57,15 +57,14 @@ if page == pages[2]:
 if page == pages[3]:
 
     st.title("Methodologie")
-
+    st.sidebar.image("linkdin.png")
     st.sidebar.header("linkdin SEGHIR OUSSAMA: " + "https://www.linkedin.com/in/oussama-seghir-75039612b/")
     st.sidebar.header("DELAHAYE VALENTIN: ")
     st.sidebar.header("linkdin HAMCHAOUI NAWAL: ")
     st.sidebar.header("linkdin CUKROWICZ ILAN: ")
     # texte
     st.text("*Pay_sportif est un projet qui traite une problematique de classification\n"
-            "*Pay_sportif à pour but de battre les algorithmes de BOOKMAKERS\n"
-            "*le travail a été fait sur 3data_set.\n")
+            "*Pay_sportif à pour but de battre les algorithmes de BOOKMAKERS\n")
     st.write("les deux BOOKMAKERS sont")
     # centrer la photo
     col1, col2, col3 = st.columns([1, 10, 1])
@@ -101,7 +100,7 @@ if page == pages[3]:
     plt.show()
     st.pyplot(fig1)
     st.write('accuracy de nos deux bookmakers calculées à partir du jeu de test '
-             '(30% de l’ensemble desdonnées), soit 8600 matchs, à savoir :\n'
+             '(30% de l’ensemble des données), soit 8600 matchs, à savoir :\n'
              '- 66.35% pour B365 \n'
              '- 67.47% pour Pinnacle.')
     st.title("Modelisation")
@@ -113,6 +112,10 @@ if page == pages[3]:
     st.image("organigramme_1.PNG")
     st.image("accurarcy_models_en_fct_rolling.PNG")
     st.image("organigramme2.PNG")
+    st.subheader('Deep learning')
+    st.text("Nous avons testé plusieurs architectures de réseaux de Neurones pour évaluer \n"
+            "le taux de bonnes prédictions grâce à un modèle de deep learning.\n"
+            "Le meilleur score obtenu est de67.17%")
     # uploaded_file = st.file_uploader("Uploadyour file here please")
     # if uploaded_file:
     # st.header('detail des scores pour chaque model')
@@ -135,44 +138,45 @@ if page == pages[3]:
         df_score_cross_val_tempo
     if option == 'df_book_odd':
         df_book_odd
+
     # Demo
-    df_final = pd.read_csv("df_final_rolling_ready_50_with_bookodds.csv", sep=';', encoding='latin-1')
-    match = df_final.iloc[20067:28666, :]
+    # df_final = pd.read_csv("df_final_rolling_ready_50_with_bookodds.csv", sep=';', encoding='latin-1')
+    # match = df_final.iloc[20067:28666, :]
 
-    option = st.selectbox('choose the match please', match)
-    st.write('You selected:', option)
-    game = match[match['matchs'] == option]
-    game
+    # option = st.selectbox('choose the match please', match)
+    # st.write('You selected:', option)
+    # game = match[match['matchs'] == option]
+    # game
 
-    model_Best_GBC = load('Best_GBC.joblib')
-    model_Best_KNN = load('Best_KNN.joblib')
-    model_Best_LR = load('Best_LR.joblib')
+    # model_Best_GBC = load('Best_GBC.joblib')
+    # model_Best_KNN = load('Best_KNN.joblib')
+    # model_Best_LR = load('Best_LR.joblib')
     # model_Best_RF = load('Best_RF.joblib')
-    model_Best_SVM = load('Best_SVM.joblib')
-    model_Best_VC_LR_GBC = load('Best_VC_LR_GBC.joblib')
-    model_Best_XGBOOST = load('Best_XGBOOST.joblib')
-    original_list = ["model_Best_GBC", "model_Best_KNN", "model_Best_LR", "model_Best_SVM", "model_Best_VC_LR_GBC",
-                     "model_Best_XGBOOST"]
+    # model_Best_SVM = load('Best_SVM.joblib')
+    # model_Best_VC_LR_GBC = load('Best_VC_LR_GBC.joblib')
+    # model_Best_XGBOOST = load('Best_XGBOOST.joblib')
+    # original_list = ["model_Best_GBC", "model_Best_KNN", "model_Best_LR", "model_Best_SVM", "model_Best_VC_LR_GBC",
+    # "model_Best_XGBOOST"]
 
-    options = st.selectbox('choose the model please', original_list)
-    st.write('You selected:', options)
-    if options == model_Best_GBC:
-        pred = model_Best_GBC.predict(game)
+    # options = st.selectbox('choose the model please', original_list)
+    # st.write('You selected:', options)
+    # if options == model_Best_GBC:
+    # pred = model_Best_GBC.predict(game)
 
-    if options == model_Best_KNN:
-        pred = model_Best_KNN.predict(game)
+    # if options == model_Best_KNN:
+    # pred = model_Best_KNN.predict(game)
 
-    if options == model_Best_LR:
-        pred = model_Best_LR.predict(game)
+    # if options == model_Best_LR:
+    # pred = model_Best_LR.predict(game)
 
-    if options == model_Best_SVM:
-        pred = model_Best_SVM.predict(game)
+    # if options == model_Best_SVM:
+    # pred = model_Best_SVM.predict(game)
 
-    if options == model_Best_VC_LR_GBC:
-        pred = model_Best_VC_LR_GBC.predict(game)
+    # if options == model_Best_VC_LR_GBC:
+    # pred = model_Best_VC_LR_GBC.predict(game)
 
-    if options == model_Best_XGBOOST:
-        pred = model_Best_XGBOOST.predict(game)
+    # if options == model_Best_XGBOOST:
+    # pred = model_Best_XGBOOST.predict(game)
 
 if page == pages[4]:
     # strategie de pari
